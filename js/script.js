@@ -35,6 +35,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     displayAll();
     // display balance
     displayBalance();
+    // change background
+    changeBackground();
 })
 // display list
 
@@ -79,6 +81,7 @@ expenseAdd.addEventListener('click', () => {
 // display all
         displayAll();
         displayBalance();
+        changeBackground();
 
 // delete the element
         element.querySelector('#delete').addEventListener('click', () => {
@@ -87,6 +90,7 @@ expenseAdd.addEventListener('click', () => {
             element.remove();
             displayAll();
             displayBalance()
+            changeBackground();
         })
 
 // edit the element
@@ -132,6 +136,7 @@ incomeAdd.addEventListener('click', () => {
 
         displayAll();
         displayBalance();
+        changeBackground();
         incomeTitle.value = "";
         incomeValue.value = "";
 // delete the element
@@ -141,6 +146,7 @@ incomeAdd.addEventListener('click', () => {
             element.remove();
             displayAll();
             displayBalance();
+            changeBackground();
         })
         element.querySelector('#edit').addEventListener('click',editIncomeList);
     }
@@ -154,6 +160,7 @@ incomeAdd.addEventListener('click', () => {
         editIncome = null;
         displayAll();
         displayBalance();
+        
     }
     else {
         alert('fields cannot be empty');
@@ -286,6 +293,34 @@ function displayBalance(){
         root.style.setProperty('--p', Math.floor((sum?out/sum:0)*100).toString());
 }
 
+function changeBackground(){
+    if(expenseList.children.length){
+        expenseList.style.background = "white";
+    }
+    else{
+        expenseList.style.background = 'url(/images/grey-plus.png) no-repeat';
+        expenseList.style.backgroundSize = '10%';
+        expenseList.style.backgroundPosition = 'center';
+
+    }
+    if(incomeList.children.length){
+        incomeList.style.background = "white";
+    }
+    else{
+        incomeList.style.background = 'url(/images/grey-plus.png) no-repeat';
+        incomeList.style.backgroundSize = '10%';
+        incomeList.style.backgroundPosition = 'center';
+
+    }
+    if(allList.children.length){
+        allList.style.background = "white";
+    }
+    else{
+        allList.style.background = 'url(/images/grey-plus.png) no-repeat';
+        allList.style.backgroundSize = '10%';
+        allList.style.backgroundPosition = 'center';
+    }
+}
 // adding to local storage
 
 function addToLocalStorage(title, value, id, check) {

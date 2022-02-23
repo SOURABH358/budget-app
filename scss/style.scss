@@ -137,6 +137,9 @@
             margin: auto;
             padding-top: 10px;
             overflow: auto;
+            background: url('/images/grey-plus.png') no-repeat;
+            background-position: center;
+            background-size: 10%;
             li{
                 display: flex;
                 justify-content: space-between;
@@ -208,6 +211,9 @@
             margin: auto;
             padding-top: 10px;
             overflow: auto;
+            background: url('/images/grey-plus.png') no-repeat;
+            background-position: center;
+            background-size: 10%;
             li{
                 display: flex;
                 justify-content: space-between;
@@ -281,6 +287,9 @@
             padding-top: 10px;
             overflow: auto;
             border-radius: 5px;
+            background: url('/images/grey-plus.png') no-repeat;
+            background-position: center;
+            background-size: 10%;
             li{
                 display: flex;
                 justify-content: space-between;

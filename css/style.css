@@ -199,6 +199,9 @@ body .container {
   margin: auto;
   padding-top: 10px;
   overflow: auto;
+  background: url("/images/grey-plus.png") no-repeat;
+  background-position: center;
+  background-size: 10%;
 }
 
 .dashboard .income ul li {
@@ -288,6 +291,9 @@ body .container {
   margin: auto;
   padding-top: 10px;
   overflow: auto;
+  background: url("/images/grey-plus.png") no-repeat;
+  background-position: center;
+  background-size: 10%;
 }
 
 .dashboard .expense ul li {
@@ -378,6 +384,9 @@ body .container {
   padding-top: 10px;
   overflow: auto;
   border-radius: 5px;
+  background: url("/images/grey-plus.png") no-repeat;
+  background-position: center;
+  background-size: 10%;
 }
 
 .dashboard .all ul li {
