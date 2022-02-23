@@ -369,7 +369,6 @@ body .container {
   margin: auto;
   padding-top: 10px;
   overflow: auto;
-  background: #87cefa;
   border-radius: 5px;
 }
 
@@ -380,6 +379,7 @@ body .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #87cefa;
   font-size: 14px;
   font-weight: 600;
   padding: 5px;
