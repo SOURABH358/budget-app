@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import 'global';
+@import 'main';
+
+// font-family: 'Ribeye', cursive;
+:root{
+    --p:0;
+}
+.display{
+    height: 45%;
+    width: 100%;
+    color:white;
+
+    h1{
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+        margin-bottom: 30px;
+        span{
+            font-weight: bolder;
+            font-size: 30px;
+            
+        }
+        .icon{
+            font-family: 'Ribeye', cursive;
+            color: $icon-color;
+            font-size: 70px;
+            font-weight: normal;
+        }
+    }
+        .balance{
+            width: 85%;
+            margin: auto;
+            margin-bottom: 10%;
+
+            h3{
+                font-weight: normal;
+                font-size: 16px;
+            }
+            .value{
+                font-size: 40px;
+                font-weight: normal;
+            }
+            
+        }
+        .chart{
+            display: flex;
+            width: 65%;
+            margin: auto;
+            justify-content: space-between;
+            position: relative;
+            .income-display{
+               h2{
+                font-weight: normal;
+                opacity: 0.7;
+                font-size: 16px;
+                margin-bottom: 5px;
+               } 
+               .income-value{
+                   font-size: 20px;
+                   font-weight: bold;
+               }
+            }
+            .outcome{
+                h2{
+                 font-weight: normal;
+                 opacity: 0.7;
+                 font-size: 16px;
+                 margin-bottom: 5px;
+                 
+                } 
+                .outcome-value{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $chart-color;
+                }
+             }
+             #chart{
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: conic-gradient($chart-color calc(var(--p)*1%), white 0);
+                left: 50%;
+                transition: 0.5s ease;
+                transform: translate(-50%,-5px) rotate(90deg);
+                
+                &:before{
+                    content: '';
+                    position:absolute;
+                    inset: 10px;
+                    border-radius: 50%;
+                    background: $container-back;
+                }
+             }
+        }
+}
+.dashboard{
+    height: 55%;
+    width: 100%;
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+    h2{
+        margin: 20px;
+    }
+    .tabs{
+        display: flex;
+        list-style: none;
+        width: 90%;
+        margin: auto;
+        gap: 15px;
+        font-size: 14px;
+        font-weight: bold;
+        li{
+            color: #999;
+            cursor: pointer;
+        }
+        .active{
+            color: #000;
+        }
+    }
+    .income{
+        display: none;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 90px;
+        bottom: 0;
+        ul{
+            height: 83%;
+            width: 100%;
+            list-style:none;
+            width: 90%;
+            margin: auto;
+            padding-top: 10px;
+            overflow: auto;
+            li{
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                padding: 5px;
+                background: $list-back;
+                border-radius: 5px;
+                p{
+                    width: 40%;
+                    height: auto;
+                    text-transform: capitalize;
+                }
+                .icons{
+                    i{
+                        margin: 0 7px;
+                        cursor:pointer;
+                    }
+                    #edit{
+                        color:$container-back;
+                    }
+                    #delete{
+                        color: $chart-color;
+                    }
+                }
+            }
+        }
+        .input{
+            height: 13%;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-top: 2px solid #777;
+            input{
+                height: 100%;
+                width: 43%;
+                border: none;
+                font-size: 18px;
+                padding-left: 5px;
+                text-transform: capitalize;
+                &:focus{
+                    outline-color: $container-back;
+                    outline-width: 1px;
+                }
+            }
+            img{
+                width: 30px;
+                margin: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    .expense{
+        display: none;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 90px;
+        bottom: 0;
+        ul{
+            height: 83%;
+            width: 100%;
+            list-style:none;
+            width: 90%;
+            margin: auto;
+            padding-top: 10px;
+            overflow: auto;
+            li{
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                padding: 5px;
+                background: $list-back;
+                border-radius: 5px;
+                p{
+                    width: 40%;
+                    height: auto;
+                    text-transform: capitalize;
+                }
+                .icons{
+                    i{
+                        margin: 0 7px;
+                        cursor:pointer;
+                    }
+                    #edit{
+                        color:$container-back;
+                    }
+                    #delete{
+                        color: $chart-color;
+                    }
+                }
+            }
+        }
+        .input{
+            height: 13%;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-top: 2px solid #777;
+            input{
+                height: 100%;
+                width: 43%;
+                border: none;
+                font-size: 18px;
+                padding-left: 5px;
+                text-transform: capitalize;
+                &:focus{
+                    outline-color: $container-back;
+                    outline-width: 1px;
+                }
+            }
+            img{
+                width: 30px;
+                margin: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    .all{
+        display: none;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 90px;
+        bottom: 0;
+        
+        ul{
+            height: 94%;
+            width: 100%;
+            list-style:none;
+            width: 90%;
+            margin: auto;
+            padding-top: 10px;
+            overflow: auto;
+            background: $list-back;
+            border-radius: 5px;
+            li{
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+                p{
+                    width: 40%;
+                    height: auto;
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+                .icons{
+                    i{
+                        margin: 0 7px;
+                        cursor:pointer;
+                    }
+                    #edit{
+                        color:$container-back;
+                    }
+                    #delete{
+                        color: $chart-color;
+                    }
+                }
+                &:hover{
+                    background-color: $all-hover;
+                }
+            }
+        }
+    }
+    .show{
+        display: block;
+    }
+}

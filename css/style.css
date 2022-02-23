@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Ribeye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2D2C2C;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .container {
+  height: 100%;
+  width: 100%;
+  background-color: #191970;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 501px) {
+  body {
+    padding-top: 0rem;
+  }
+  body .container {
+    width: 400px;
+    height: 90%;
+  }
+}
+
+:root {
+  --p:0;
+}
+
+.display {
+  height: 45%;
+  width: 100%;
+  color: white;
+}
+
+.display h1 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.display h1 span {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.display h1 .icon {
+  font-family: 'Ribeye', cursive;
+  color: #00FF00;
+  font-size: 70px;
+  font-weight: normal;
+}
+
+.display .balance {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.display .balance h3 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.display .balance .value {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.display .chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.display .chart .income-display h2 {
+  font-weight: normal;
+  opacity: 0.7;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.display .chart .income-display .income-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.display .chart .outcome h2 {
+  font-weight: normal;
+  opacity: 0.7;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.display .chart .outcome .outcome-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF5F1F;
+}
+
+.display .chart #chart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#FF5F1F calc(var(--p)*1%), white 0);
+  left: 50%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-transform: translate(-50%, -5px) rotate(90deg);
+          transform: translate(-50%, -5px) rotate(90deg);
+}
+
+.display .chart #chart:before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  background: #191970;
+}
+
+.dashboard {
+  height: 55%;
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+}
+
+.dashboard h2 {
+  margin: 20px;
+}
+
+.dashboard .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dashboard .tabs li {
+  color: #999;
+  cursor: pointer;
+}
+
+.dashboard .tabs .active {
+  color: #000;
+}
+
+.dashboard .income {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+}
+
+.dashboard .income ul {
+  height: 83%;
+  width: 100%;
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+  overflow: auto;
+}
+
+.dashboard .income ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #87cefa;
+  border-radius: 5px;
+}
+
+.dashboard .income ul li p {
+  width: 40%;
+  height: auto;
+  text-transform: capitalize;
+}
+
+.dashboard .income ul li .icons i {
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.dashboard .income ul li .icons #edit {
+  color: #191970;
+}
+
+.dashboard .income ul li .icons #delete {
+  color: #FF5F1F;
+}
+
+.dashboard .income .input {
+  height: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-top: 2px solid #777;
+}
+
+.dashboard .income .input input {
+  height: 100%;
+  width: 43%;
+  border: none;
+  font-size: 18px;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+
+.dashboard .income .input input:focus {
+  outline-color: #191970;
+  outline-width: 1px;
+}
+
+.dashboard .income .input img {
+  width: 30px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.dashboard .expense {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+}
+
+.dashboard .expense ul {
+  height: 83%;
+  width: 100%;
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+  overflow: auto;
+}
+
+.dashboard .expense ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #87cefa;
+  border-radius: 5px;
+}
+
+.dashboard .expense ul li p {
+  width: 40%;
+  height: auto;
+  text-transform: capitalize;
+}
+
+.dashboard .expense ul li .icons i {
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.dashboard .expense ul li .icons #edit {
+  color: #191970;
+}
+
+.dashboard .expense ul li .icons #delete {
+  color: #FF5F1F;
+}
+
+.dashboard .expense .input {
+  height: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-top: 2px solid #777;
+}
+
+.dashboard .expense .input input {
+  height: 100%;
+  width: 43%;
+  border: none;
+  font-size: 18px;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+
+.dashboard .expense .input input:focus {
+  outline-color: #191970;
+  outline-width: 1px;
+}
+
+.dashboard .expense .input img {
+  width: 30px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.dashboard .all {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+}
+
+.dashboard .all ul {
+  height: 94%;
+  width: 100%;
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+  overflow: auto;
+  background: #87cefa;
+  border-radius: 5px;
+}
+
+.dashboard .all ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard .all ul li p {
+  width: 40%;
+  height: auto;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.dashboard .all ul li .icons i {
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.dashboard .all ul li .icons #edit {
+  color: #191970;
+}
+
+.dashboard .all ul li .icons #delete {
+  color: #FF5F1F;
+}
+
+.dashboard .all ul li:hover {
+  background-color: #00bfff;
+}
+
+.dashboard .show {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

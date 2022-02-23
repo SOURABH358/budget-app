@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eed35fa79d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Budget App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="display">
+            <h1><span class="icon">b</span>udget <span>App</span></h1>
+            <div class="balance">
+                <h3>Balance</h3>
+                <div class="value"></div>
+            </div>
+            <div class="chart">
+                <div class="income-display">
+                    <h2>Income</h2>
+                    <div class="income-value"></div>
+                </div>
+                <div id="chart"></div>
+                <div class="outcome">
+                    <h2>Outcome</h2>
+                    <div class="outcome-value"></div>
+                </div>
+            </div>
+        </div>
+        <!-- dashboard -->
+        <div class="dashboard">
+            <h2>Dashboard</h2>
+            <ul class="tabs">
+                <li data-id="expense">Expenses</li>
+                <li data-id="income">Income</li>
+                <li class = "active" data-id="all">All</li>
+            </ul>
+            <!-- expense list -->
+            <div class="expense">
+                <ul id = "expense"></ul>
+                <div class="input">
+                    <input type="text" placeholder="Title" id = "expense-title">
+                    <input type="text" placeholder="$0" id = "expense-value">
+                    <img src="./images/plus-icon.png"  class = "expense-add" alt="plus-icon">
+                </div>
+            </div>
+
+            <!-- income list -->
+            <div class="income">
+                <ul id = "income">
+                </ul>
+                <div class="input">
+                    <input type="text" placeholder="Title" id = "income-title">
+                    <input type="text" placeholder="$0" id = "income-value">
+                    <img src="./images/plus-icon.png"  class = "income-add" alt="plus-icon">
+                </div>
+            </div>
+            <!-- all list -->
+            <div class="all show">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
