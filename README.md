@@ -11,4 +11,4 @@ It has a chart to gave a more clear picture of the ratio of total expenses to in
   - SCSS
   - JAVASCRIPT
 
-check the live working of the App. Visit the code and star the repo if you like it.
+Check the live working of the [App](https://sourabh358.github.io/budget-app/). Visit the code and star the repo if you like it.
