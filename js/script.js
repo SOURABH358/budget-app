@@ -298,7 +298,7 @@ function changeBackground(){
         expenseList.style.background = "white";
     }
     else{
-        expenseList.style.background = 'url(/images/grey-plus.png) no-repeat';
+        expenseList.style.background = 'url(./images/grey-plus.png) no-repeat';
         expenseList.style.backgroundSize = '10%';
         expenseList.style.backgroundPosition = 'center';
 
@@ -307,7 +307,7 @@ function changeBackground(){
         incomeList.style.background = "white";
     }
     else{
-        incomeList.style.background = 'url(/images/grey-plus.png) no-repeat';
+        incomeList.style.background = 'url(./images/grey-plus.png) no-repeat';
         incomeList.style.backgroundSize = '10%';
         incomeList.style.backgroundPosition = 'center';
 
@@ -316,7 +316,7 @@ function changeBackground(){
         allList.style.background = "white";
     }
     else{
-        allList.style.background = 'url(/images/grey-plus.png) no-repeat';
+        allList.style.background = 'url(./images/grey-plus.png) no-repeat';
         allList.style.backgroundSize = '10%';
         allList.style.backgroundPosition = 'center';
     }
