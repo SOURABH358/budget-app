@@ -274,11 +274,11 @@
             margin: auto;
             padding-top: 10px;
             overflow: auto;
-            background: $list-back;
             border-radius: 5px;
             li{
                 display: flex;
                 justify-content: space-between;
+                background: $list-back;
                 font-size: 14px;
                 font-weight: 600;
                 padding: 5px;
