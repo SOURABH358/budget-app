@@ -235,6 +235,10 @@ body .container {
   color: #FF5F1F;
 }
 
+.dashboard .income ul li:hover {
+  background-color: #00bfff;
+}
+
 .dashboard .income .input {
   height: 13%;
   display: -webkit-box;
@@ -320,6 +324,10 @@ body .container {
   color: #FF5F1F;
 }
 
+.dashboard .expense ul li:hover {
+  background-color: #00bfff;
+}
+
 .dashboard .expense .input {
   height: 13%;
   display: -webkit-box;
@@ -382,9 +390,9 @@ body .container {
   background: #87cefa;
   font-size: 14px;
   font-weight: 600;
+  margin-bottom: 10px;
   padding: 5px;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .dashboard .all ul li p {

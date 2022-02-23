@@ -163,6 +163,9 @@
                         color: $chart-color;
                     }
                 }
+                &:hover{
+                    background-color: $all-hover;
+                }
             }
         }
         .input{
@@ -231,6 +234,9 @@
                         color: $chart-color;
                     }
                 }
+                &:hover{
+                    background-color: $all-hover;
+                }
             }
         }
         .input{
@@ -281,9 +287,9 @@
                 background: $list-back;
                 font-size: 14px;
                 font-weight: 600;
+                margin-bottom: 10px;
                 padding: 5px;
                 border-radius: 5px;
-                cursor: pointer;
                 p{
                     width: 40%;
                     height: auto;
