@@ -280,7 +280,7 @@ function displayBalance(){
             }
         })
         let sum = out+inc;
-        balance.innerText = '$' + (inc-out);
+        balance.innerText = inc<out?'-$' + (out-inc):'$'+(inc-out);
         outcome.innerText = '$' + out;
         income.innerText = '$' + inc;
         root.style.setProperty('--p', Math.floor((sum?out/sum:0)*100).toString());
